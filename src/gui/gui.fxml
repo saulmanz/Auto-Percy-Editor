@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="stackPane" prefHeight="530.0" prefWidth="555.0" style="-fx-background-color: #111111" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="203.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="titleText" fill="#bb00ff00" layoutX="1.0" layoutY="238.0" smooth="false" strokeType="OUTSIDE" strokeWidth="2.0" text="Auto Percy Adjuster" textAlignment="CENTER" wrappingWidth="555.0">
+         <font>
+            <Font name="Leelawadee UI Semilight" size="47.0" />
+         </font>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2751677852348993">
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.03606237843632698" green="0.9736841917037964" blue="0.8017868995666504" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Text>
+      <Button layoutX="55.0" layoutY="343.0" mnemonicParsing="false" onAction="#osuButton" onDragDropped="#handleOsuButtonDrop" onDragOver="#handleDragOver" prefHeight="25.0" prefWidth="105.0" text="Select .osu" />
+      <Text fx:id="osuText" layoutX="172.0" layoutY="363.0" onDragDropped="#handleOsuButtonDrop" onDragOver="#handleDragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select the .osu of the map">
+         <font>
+            <Font name="Leelawadee UI" size="17.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2751677852348993">
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.03606237843632698" green="0.9736841917037964" blue="0.8017868995666504" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7292032241821289" green="0.2508528232574463" blue="0.9342105388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Text>
+      <Button layoutX="56.0" layoutY="396.0" mnemonicParsing="false" onAction="#lnTailButton" onDragDropped="#handleLNTailButtonDrop" onDragOver="#handleDragOver" prefHeight="25.0" prefWidth="105.0" text="Select LN Tail" />
+      <Text fx:id="lnTailText" layoutX="172.0" layoutY="408.0" onDragDropped="#handleLNTailButtonDrop" onDragOver="#handleDragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your long note tail png" textOrigin="CENTER">
+         <font>
+            <Font name="Leelawadee UI" size="17.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2751677852348993">
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.03606237843632698" green="0.9736841917037964" blue="0.8017868995666504" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7292032241821289" green="0.2508528232574463" blue="0.9342105388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Text>
+      <Button layoutX="226.0" layoutY="447.0" mnemonicParsing="false" onAction="#generateButton" text="Generate LN Tail" />
+      <Button layoutX="55.0" layoutY="292.0" mnemonicParsing="false" onAction="#osrButton" onDragDropped="#handleOsrButtonDrop" onDragOver="#handleDragOver" prefHeight="25.0" prefWidth="105.0" text="Select .osr" textOverrun="CLIP" />
+      <StackPane layoutX="157.0" layoutY="475.0" prefHeight="41.0" prefWidth="244.0">
+         <children>
+            <Text fx:id="messageText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER">
+               <font>
+                  <Font name="Leelawadee UI" size="14.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2751677852348993">
+                           <color>
+                              <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.03606237843632698" green="0.9736841917037964" blue="0.8017868995666504" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children>
+      </StackPane>
+      <Text fx:id="osrText" layoutX="172.0" layoutY="311.0" onDragDropped="#handleOsrButtonDrop" onDragOver="#handleDragOver" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select the replay you want to analyze" wrappingWidth="348.69091796875">
+         <font>
+            <Font name="Leelawadee UI" size="17.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.2751677852348993">
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.03529411926865578" green="0.9725490212440491" blue="0.800000011920929" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8156862854957581" green="0.5803921818733215" blue="0.9098039269447327" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7292032241821289" green="0.2508528232574463" blue="0.9342105388641357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Text>
+   </children>
+</AnchorPane>
